@@ -193,6 +193,8 @@ body {
     width:90%;
     margin: 0 auto;
     padding: 15px;
+    margin-top: 25px;
+    margin-bottom: 80px;
 }
 .collection .bottom div:first-child {
     margin-bottom: 15px;
@@ -205,4 +207,12 @@ body {
 }
 .collection .bottom div img {
     width:23.95%;
+}
+.ourBrand .bottom {
+    display: flex;
+    width: 85%;
+    margin:0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
 }
