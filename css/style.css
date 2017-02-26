@@ -216,3 +216,12 @@ body {
     align-items: center;
     padding: 80px;
 }
+.customerSays .color {
+    background:rgb(217, 191, 143);
+}
+.customerSays .bottom {
+    margin: 0 auto;
+    margin-top:25px;    
+    display: flex;
+    width: 90%;
+}
