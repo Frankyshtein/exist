@@ -189,5 +189,20 @@ body {
 .collection .bottom {
     display: flex;
     flex-wrap: wrap;
-    
+    border: 1px solid #eaeaea;
+    width:90%;
+    margin: 0 auto;
+    padding: 15px;
+}
+.collection .bottom div:first-child {
+    margin-bottom: 15px;
+} 
+.collection .bottom div img {
+    margin-right: 15px;
+}
+.collection .bottom div img:last-child {
+    margin-right: 0;
+}
+.collection .bottom div img {
+    width:23.95%;
 }
