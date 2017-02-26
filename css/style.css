@@ -225,3 +225,9 @@ body {
     display: flex;
     width: 90%;
 }
+.customerSays .bottom div {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding-top: 20%;
+}
