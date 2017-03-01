@@ -7,6 +7,11 @@
 @font-face {
     font-family:fontAwesome; src:url(../fonts/FontAwesome.otf);
 }
+a {
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
 body {
     font-family: latoRegular;
     font-size: 10px;
@@ -78,9 +83,58 @@ body {
 .currency {
     margin-left:52px;
 }
-.slider img{
-    width:100%;   
+.main-menu {
+    font-family: latoRegular !important;
+    font-size: 10px !important;
+    color:#fff;
 }
+.main-menu > li {
+    position: relative;
+    background: #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70px;
+    height: 35px;
+}
+.headerDown .main-menu > li img {
+    margin-right: 0;
+}
+.main-menu .sub-menu {
+    width: 70px;
+    font-family: latoRegular !important;
+    font-size: 10px !important;
+    background: #000;
+    position: absolute;
+    top:35px;
+    z-index: 2;
+    display: none;
+}
+.main-menu .sub-menu li a {
+    display: block;
+    box-sizing: border-box;
+    width: 70px;
+    padding: 11.5px 7px;;   
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+}
+.main-menu > li:hover .sub-menu {
+    display: block;
+}
+
+
+
+
+
+.slider img{
+    position: relative;
+    width: 100%;
+}
+
+
+
+
 .advantages {
     width:90%;
     height:230px;
@@ -88,17 +142,22 @@ body {
     display:flex;
     justify-content: space-between;
     align-items:center;
+    color:#fff;
+}
+.advantages div {
+    display: flex;
 }
 .advantages .advantage1, .advantage2, .advantage3 {
     background:rgb(217, 191, 143);
     width:385px;
     height:90px;
-}
-.advantage1 {
     display: flex;
     align-items: center;
+    justify-content:flex-start;
+    font-size: 15px;
 }
 .advantage2 {
+    justify-content: space-between;
     width:430px;
 }
 .advantages .advantage2 {
@@ -115,9 +174,6 @@ body {
 }
 .advantage2 {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin-left: -20px;
     margin-right: -20px;
     z-index:1;
@@ -146,6 +202,20 @@ body {
     border-right:45px solid #fff;
     border-bottom:45px solid transparent;
 }
+.advantages li:first-child {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+.advantage1 img {
+    margin:0 25px 0 25px;
+}
+.advantage2 img {
+    margin:0 25px 0 25px;
+}
+.advantage3 img {
+    margin:0 25px 0 25px;
+}
+
 .top {
     width: 90%;
     display: flex;
@@ -159,7 +229,7 @@ body {
     height: 100px;
 }
 .rhombus {
-    width: 15px;
+    min-width: 15px;
     height: 15px;
     background:rgb(217, 191, 143); 
     transform: rotate(45deg);
@@ -204,6 +274,10 @@ body {
 .collection .bottom div:first-child {
     margin-bottom: 15px;
 } 
+.collection .bottom div {
+    display: flex;
+    justify-content: space-between;
+}
 .collection .bottom div img {
     margin-right: 15px;
 }
@@ -211,7 +285,7 @@ body {
     margin-right: 0;
 }
 .collection .bottom div img {
-    width:23.95%;
+    width:23.9%;
 }
 .ourBrand .bottom {
     display: flex;
@@ -229,10 +303,11 @@ body {
     margin-top:25px;    
     display: flex;
     width: 90%;
-    justify-content: space-between;
-    padding-bottom: 45px;
-    padding-top: 35px;
-    position: relative;
+    flex-direction: column;
+}
+.customerSays .bottom .row2 {
+    display: flex;
+    justify-content: space-around;
 }
 .customerSays .bottom .customer1 {
     display: flex;
@@ -241,7 +316,7 @@ body {
     padding-top: 10%;
     text-align: left;
     font-size: 18px;
-    margin-left: -8%;
+    margin-left: -3%;
     color:#fff;
     font-family: fontAwesome;
     font-style: italic;
@@ -262,8 +337,8 @@ body {
     align-items:flex-end;
     padding-top: 10%;
     text-align: right;
-    font-size: 18px;
-    margin-right: -8%;
+    font-size: 16px;
+    margin-right: -3.5%;
     color:#fff;
     font-family: fontAwesome;
     font-style: italic;
@@ -278,8 +353,8 @@ body {
     color:rgb(127,126,126);
     font-style: normal;
 }
-.customerSays .trel3 {
-    position: absolute;
+.customerSays .row1 .trel3 {
+/*    position: absolute;*/
     z-index: 2;
     width: 0;
     height: 0;
@@ -287,8 +362,6 @@ body {
     border-top:30px solid #fff;
     border-right:185px solid transparent;
     margin: 0 auto;
-    top:0;
-    right: 34.9%;
 }
 .color2 {
     background: #141414;
@@ -389,4 +462,81 @@ footer .row3 li img {
     border:none;
     color: #fff;
 }
-
+.container {
+    width:100%;
+    height:641px;
+    background: url("../img/slider.jpg");
+    background-repeat: no-repeat;
+    position:relative;
+    display: flex;
+}
+.romb {
+    position: absolute;
+    width:15px;
+    height:15px;
+    z-index: 3;
+    transform: rotate(45deg);
+    background: #b2b2b2;
+}
+.container img {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#one .romb {
+    top:600px;
+    left:46%;
+}
+#two .romb {
+    top:600px;
+    left:48%;
+}
+#three .romb {
+    top:600px;
+    left:50%;
+}
+#four .romb {
+    top:600px;
+    left:52%;
+}
+.container #one:hover img {
+    display: block;
+    z-index: 2;
+    width: 1450px;
+}
+.container #one:hover .romb {
+    background:black;
+}
+.container #two:hover img {
+    display: block;
+    z-index: 2;
+}
+.container #two:hover .romb {
+    background:black;
+}
+.container #three:hover img {
+    display: block;
+    z-index: 2;
+}
+.container #three:hover .romb {
+    background:black;
+}
+.container #four:hover img {
+    display: block;
+    z-index: 2;
+}
+.container #four:hover .romb {
+    background:black;
+}
+.slider .trel3 {
+    position: absolute;
+    z-index: 5;
+    width: 0;
+    height: 0;
+    border-left:200px solid transparent;
+    border-top:40px solid #fff;
+    border-right:200px solid transparent;
+    top:0;
+    left:525px;
+}
