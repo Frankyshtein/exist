@@ -126,9 +126,10 @@ body {
 
 
 
-
+.slider {
+    max-width: 1450px;
+}
 .slider img{
-    position: relative;
     width: 100%;
 }
 
@@ -538,5 +539,5 @@ footer .row3 li img {
     border-top:40px solid #fff;
     border-right:200px solid transparent;
     top:0;
-    left:525px;
+    left:34%;
 }
