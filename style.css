@@ -31,7 +31,7 @@ body {
     right:10px;
 }
 .wrapper {
-    min-width:900px;
+    min-width:905px;
     width: 100%;
     height: 100%;
 }
@@ -152,7 +152,6 @@ body {
 }
 .slider > img {
     width: 100%;
-    max-height:690px;
     z-index:1;
 }
 .container {
@@ -177,22 +176,22 @@ body {
     display: none;
 }
 #one .romb {
-    top:85%;
+    top:90%;
     left:45%;
     margin-left: -7.5px;
 }
 #two .romb {
-    top:85%;
+    top:90%;
     left:48.3%;
     margin-left: -7.5px;
 }
 #three .romb {
-    top:85%;
+    top:90%;
     left:51.7%;
     margin-left:-7.5px;
 }
 #four .romb {
-    top:85%;
+    top:90%;
     left:55%;
     margin-left:-7.5px;
 }
@@ -240,7 +239,92 @@ body {
     left:50%;
     margin-left: -200px;
 }
-
+.midSeason {
+    position: absolute;
+    z-index: 4;
+    top:39%;
+    left:50%;
+    margin-top: -120px;
+    margin-left:-120px;
+    width: 240px;
+    height:240px;
+    border: 2px solid #fff;
+    font-size:18px;
+    color:#fff;
+    font-weight:600;
+    text-align: center;
+    box-sizing: border-box;
+}
+.midSeason p:nth-child(2) {
+    font-size: 45px;
+    color:#000;
+}
+.midSeason p:last-child {
+    font-size: 25px;
+    color:#000;
+}
+.midSeason > div {
+    box-sizing: border-box;
+    width: 220px;
+    height:220px;
+    border: inherit;
+    margin:8px auto;
+}
+.midSeason p {
+    margin:20px 0;
+}
+.midSeason > div > div {
+    position: relative;
+}
+.midSeason > div > div > div:first-child  {
+    position: absolute;
+    top:8px;
+    left:28px;
+    height: 2px;
+    width: 40px;
+    background: #fff;
+}
+.midSeason > div > div > div:last-child  {
+    position: absolute;
+    top:8px;
+    right:28px;
+    height: 2px;
+    width: 40px;
+    background: #fff;
+}
+.midSeason > div > div > div:nth-child(2)  {
+    position: absolute;
+    bottom:1px;
+    left:18px;
+    height: 2px;
+    width: 50px;
+    background: #fff;
+}
+.midSeason > div > div > div:nth-child(4)  {
+    position: absolute;
+    bottom:1px;
+    right:18px;
+    height: 2px;
+    width: 50px;
+    background: #fff;
+}
+.slider .button {
+    position: absolute;
+    top:75%;
+    margin-top:-22.5px;
+    left:50%;
+    margin-left:-90px;
+    z-index: 3;
+    width: 180px;
+    background:#f0975c;
+    font-size: 25px;
+    color:#fff;
+    text-align: center;
+    padding:10px 0; 
+}
+.slider .button:hover {
+    background: #000;
+}
 /* СЛАЙДЕР ********************************************************************* */
 
 /* ПРЕИМУЩЕСТВА ****************************************************************************** */
@@ -444,7 +528,7 @@ body {
 .collection .bottom > div {
     display: flex;
     justify-content: space-between;
-    widows: 100%;
+    width: 100%;
 }
 .collection .bottom > div > div {
     width: 24.1%;
@@ -630,6 +714,10 @@ footer .row1 li:first-child {
 }
 footer .row1 li img {
     margin-right:3%;
+}
+footer .row1 li img:hover {
+    border-radius: 50%;
+    background: #d9bf8f;
 }
 footer .row1 span {
     font-family:fontAwesome;
