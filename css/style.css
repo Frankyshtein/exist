@@ -715,6 +715,10 @@ footer .row1 li:first-child {
 footer .row1 li img {
     margin-right:3%;
 }
+footer .row1 li img:hover {
+    border-radius: 50%;
+    background: #d9bf8f;
+}
 footer .row1 span {
     font-family:fontAwesome;
     font-style: italic;
