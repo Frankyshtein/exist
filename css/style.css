@@ -34,6 +34,17 @@ header {
     width: 25px;
     margin-left: 15px;
 }
+.green {
+    background: #83b880;
+    height: 100%;
+    line-height: 35px;
+    padding: 0 15px;
+    color:#fff;
+}
+.green:hover {
+    color: #000;
+    background: #e4e4e2;
+}
 .search {
     height: 80px;
     background: #fff;
