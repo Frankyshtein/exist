@@ -1,6 +1,8 @@
 body {
     background: #eee;
     font: 14px/20px Arial, Tahoma, Helvetica, sans-serif;
+    max-width: 1500px;
+    min-width: 920px;
 }
 a {
     text-decoration: none;
@@ -14,16 +16,22 @@ header {
     padding: 0 5% 0 5%;
 }
 .signIn {
+    width: 100%;
+    box-sizing: border-box;
     height:35px;
-    display: flex;
-    align-items: center;
+    vertical-align: middle;
     color: #646464;
     font-size:13px;
-    padding-right:0;
+    position: relative;
+    overflow: hidden;
+}
+.signIn span {
+    line-height: 35px;
 }
 .location {
     background: url(../img/map-marker.svg) no-repeat;
     background-position: 0 center;
+    float: left;
     height: 100%;
     width: 25px;
 }
@@ -32,29 +40,134 @@ header {
     background-position: 0 center;
     height: 100%;
     width: 25px;
+    float: left;
     margin-left: 15px;
 }
-.green {
+.signIn > span {
+    float:left;
+}
+.enter {
+    display: flex;
+    align-items: center;
+    float: right;
+}
+.signIn .green {
     background: #83b880;
     height: 100%;
     line-height: 35px;
     padding: 0 15px;
     color:#fff;
+    float:right;
 }
 .green:hover {
     color: #000;
     background: #e4e4e2;
 }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.enter .user {
+    margin-left:15px; 
+    margin-right: 5px;
+    background: url(../img/user.svg) no-repeat;
+    width: 22px;
+    height: 22px; 
+}
+.enter .arrow {
+    margin-right:15px; 
+    margin-left: 5px;
+    background: url(../img/arrow.svg) no-repeat;
+    width: 13px;
+    height: 12px;
+    background-position: 0 -15px;
+}
+.signIn a[href^="http"] {
+    border-radius: 50%;
+    background: #e4e4e2;
+    padding: 4px 8px;
+    font-size:23px;
+    position: absolute;
+    right:15px;
+    top:calc(50% - 14px);
+}
 .search {
     height: 80px;
     background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search > div {
+    display: flex;
+    align-items: center;
+    width: 120px;
+    height: 45px;
+    background: #EBEEEF;
+}
+.search > div:hover {
+    background: #ffe085;
+}
+.basket {
+    background: url(../img/icons-new.png) no-repeat;
+    width: 45px;
+    height: 45px;
+    background-position: 0 -224px;
+    margin-left: 5px;
+}
+.orders {
+    background: url(../img/icons-new.png) no-repeat;
+    width: 45px;
+    height: 45px;
+    background-position: 0 -268px;
+    margin-left: 5px;
 }
 .menu {
     height:45px;
     background: #256892;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
 }
-
-/* **************** Каталог*/
+.menu ul {
+    display: flex;
+    margin-left: 45px;
+}
+.menu ul li {
+    margin-right: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.menu .lines {
+    background: url(../img/mainmenu-icon.svg) no-repeat;
+    width: 45px;
+    height: 45px;
+    background-position: 0 -900px;
+    position: absolute;
+    left: -45px;
+    top:-13px;
+}
+.lines:hover {
+    background: #000;
+}
+.menu > div {
+    display: flex;
+    align-items: center;
+    background: #cc5e5e;
+    padding-left: 15px;
+}
+.menu .arrow {
+    background: url(../img/icons-new.png) no-repeat;
+    width: 40px;
+    height: 45px;
+    background-position: -10px 0;
+    margin-left:15px;
+}
+/* ******************************************************************** Каталог*/
 
 .wrapper {
     display: flex;
@@ -72,6 +185,9 @@ header {
 .column2 {
     width:20%;
 }
+.column2 > div {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); 
+}
 .column1 > div {
     display: flex;
     align-items: center;
@@ -85,24 +201,36 @@ header {
     display: flex;
     justify-content: space-around;
     background: #fff;
-    padding: 10%;
-    width: 100%
+    padding: 2%;
+    width: 100%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .catalog li {
     width: 100%;
     display: flex;
     position: relative;
+    margin-bottom: 5%;
+}
+.catalog li a {
+    width: 100%;
 }
 .catalog ul {
-    padding-right: 15%;
+    padding-right: 4%;
+    width:12%;
 }
 .catalog span {
     margin-left:-19px;
     position: absolute;
+    color: #e67a7d;
+    font-weight: bold;
+}
+.catalog ul:last-child li:last-child {
+    color: gray;
 }
 .block {
     position: relative;
     margin-right: 20px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .block p {
     width: 100%;
@@ -114,7 +242,8 @@ header {
     background: #91ddd2;
     width:45%;
     height:200px;
-    box-shadow: 0 0 155px rgba(0, 0, 0,0.15) inset;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1),
+        0 0 155px rgba(0, 0, 0,0.15) inset;
 }
 .block1 p {
     width: 100%;
@@ -127,7 +256,6 @@ header {
     width: calc((100% - 45% - 40px) / 2);
     height: 200px;
     background: #fff;
-    box-shadow: none;
 }
 .block3 {
     width: calc((100% - 45% - 40px) / 2);
@@ -142,6 +270,7 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .popular > span:first-child {
     width:70%;
@@ -150,6 +279,7 @@ header {
     display: flex;
     width: 100%;
     background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .news ul {
     display: flex;
@@ -161,10 +291,16 @@ header {
     padding: 5%;
 }
 .column2 div:last-child {
-    background: #f5f5f5;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    border: none;
+    background: #ffeac4;
+    border: 5px solid #f7d599;
+}
+.column2 li {
+    color:#256892;
+    margin-bottom: 5%;
+}
+.column2 li:first-child {
+    color:#c54141;
+    font-weight: bold;
 }
 
 /* ************  Футер */
