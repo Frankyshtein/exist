@@ -3,7 +3,6 @@ body {
     font: 14px/20px Arial, Tahoma, Helvetica, sans-serif;
 }
 header , .wrapper , footer {
-    max-width: 1500px;
     min-width: 920px;
 }
 a {
@@ -236,44 +235,77 @@ header {
     width: 100%;
     position: absolute;
     text-align: center;
-    bottom: 10%;
+    bottom: 8%;
+    font-size: 16px;
 }
 .block1 {
-    background: #91ddd2;
-    width:45%;
+    background: radial-gradient(ellipse at center, #91ddd2 0%, #5ec0b6 100%);
+    width:40%;
     height:200px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1),
-        0 0 155px rgba(0, 0, 0,0.15) inset;
 }
 .block1 p {
     width: 100%;
     position: absolute;
     text-align: center;
-    bottom: 10%;
+    bottom: 8%;
     color: #fff;
+    font-size: 16px;
 }
 .block2 {
-    width: calc((100% - 45% - 40px) / 2);
+    width: calc((100% - 40% - 40px) / 2);
     height: 200px;
     background: #fff;
+    color: #363636;
 }
 .block3 {
-    width: calc((100% - 45% - 40px) / 2);
+    width: calc((100% - 40% - 40px) / 2);
     background: #fff;
+    height: 200px;
+}
+.block3 ul {
+    width: 100%;
+    color: #363636;
+}
+.block3 li  {
+    padding: 10px 15px;
+    border-bottom: 1px solid #e4e4e2;
 }
 .noMargin {
     margin-right: 0;
+}
+.yellow {
+    background: radial-gradient(ellipse at center, #ffd44b 0%, #ffaf00 100%);
+}
+.purple {
+    background: radial-gradient(ellipse at center, #c294c0 0%, #8e589c 100%);
+}
+.rose {
+    background: radial-gradient(ellipse at center, #f7b1b3 1%, #f06476 100%);
 }
 .popular {
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: flex-start;
     background: #fff;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 .popular > span:first-child {
     width:70%;
+}
+.popular > div {
+    width:cacl(100% / 3); 
+    height: 100px;
+}
+.popular div img {
+    max-height: 100px;
+    margin: 0 auto;
+}
+.popular > div p {
+    position: absolute;
+    bottom:10px;
 }
 .news {
     display: flex;
