@@ -13,6 +13,9 @@ a {
 header {
     margin-bottom: 20px;   
 }
+.signIn , .search, .menu {
+    max-width: 1500px;
+}
 .signIn {
     width: 90%;
     margin: 0 auto;
