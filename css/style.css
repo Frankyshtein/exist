@@ -13,10 +13,8 @@ a {
 header {
     margin-bottom: 20px;   
 }
-.signIn , .search, .menu {
-    max-width: 1500px;
-}
 .signIn {
+    max-width: 1500px;
     width: 90%;
     margin: 0 auto;
     box-sizing: border-box;
@@ -99,6 +97,7 @@ header {
 }
 .search > div {
     width: 90%;
+    max-width: 1500px;
     margin: 0 auto;
     height: 80px;
     background: #fff;
@@ -132,6 +131,7 @@ header {
 }
 .menu > div {
     width: 90%;
+    max-width: 1500px;
     margin: 0 auto;
     height:45px;
     background: #256892;
