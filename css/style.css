@@ -69,6 +69,9 @@ header {
   display: table;
   clear: both;
 }
+.enter {
+    position: relative;
+}
 .enter .user {
     margin-left:15px; 
     margin-right: 5px;
@@ -84,7 +87,7 @@ header {
     height: 12px;
     background-position: 0 -15px;
 }
-.signIn a[href^="http"] {
+.signIn > a[href^="http"] {
     border-radius: 50%;
     background: #e4e4e2 !important;
     padding: 4px 8px;
@@ -92,6 +95,94 @@ header {
     position: absolute;
     right:1%;
     top:calc(35px / 2 - 14px);
+}
+.frame1 {
+    display: none;
+    position: absolute;
+    padding: 20px 35px;
+    width: 100%;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    top:35px;
+    right: 0;
+    z-index: 2;
+    width: 320px;
+    color:#c9d2db;    
+}
+.frame1 form {
+    display: block;
+    width:100%;
+}
+.trel {
+    width:0;
+    border-left:7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 8px solid #fff;
+    position:absolute;
+    top:-8px;
+    right:20px;
+    z-index: 1;
+}
+.frame1 .cab {
+    width:100%;
+    font-size: 15px;
+    color: #363636;
+    margin-bottom: 15px;
+    font-weight:bold;
+}
+.frame1 .login {
+    height: 35px;
+    width: 100%;
+    padding-left:10px;
+    box-sizing: border-box;
+    border: 1px solid #c9d2db;
+    margin-bottom:10px; 
+}
+.frame1 .password {
+    height: 35px;
+    width: 100%;
+    padding-left:10px;
+    box-sizing: border-box;
+    border: 1px solid #c9d2db;
+    margin-bottom:10px; 
+    position: relative;
+}
+.frame1 .button2 {
+    position: absolute;
+    right: 45px;
+    top: 110px;
+    color: gray;
+    background: none;
+    border:none;
+    cursor: poiner;
+}
+.frame1 label {
+    color:Navy;
+    margin-left: -150px;
+}
+.frame1 form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.frame1 .button3 {
+    height: 32px;
+    color: #fff;
+    cursor: pointer;
+    cursor: pointer;
+    padding: 0 15px;
+    background: #73a2b9;
+    border-radius: 2px;
+    border: none;
+    line-height: 32px;   
+}
+.social {
+    margin:20px 0 10px 0;
+    padding-top:10px; 
+    border-top: 2px solid #e4e4e2;
+}
+.enter:hover .frame1{
+    display: block;
 }
 .search {
     background: #fff;
@@ -179,6 +270,7 @@ header {
 }
 .menu {
     background:#256892; 
+    position: relative;
 }
 .menu ul {
     display: flex;
@@ -196,14 +288,15 @@ header {
     position: absolute;
     left: -35px;
 }
-.lines:hover {
-    background: #000;
+.lines:hover .frame3 {
+    display: block;
 }
 .menu > div > div {
     display: flex;
     align-items: center;
     background: #cc5e5e;
     padding-left: 15px;
+    position: relative;
 }
 .menu .arrow {
     background: url(../img/icons-new.png) no-repeat;
@@ -212,7 +305,111 @@ header {
     background-position: -10px 0;
     margin-left:15px;
 }
-
+.menu > div > div:hover .frame2 {
+    display: block;
+}
+.frame2 {
+    display: none;
+    position: absolute;
+    top:45px;
+    right: 0;
+    width: 450px;
+    color:#6d6d6d;
+    font-size:11px;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+.frame2 .row1 {
+    background: #f5f5f5;   
+    padding: 10px 15px 6px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.frame2 .row1 > div {
+    display: flex;
+    align-items: center;
+}
+.frame2 .toggle {
+    display: inline-block;
+    background: url(../img/blocks-toggle.png) no-repeat;
+    width: 20px;
+    height:20px;
+    background-position: -42px 0;
+    margin-left:10px;
+}
+.frame2 .row2 {
+    padding: 10px 15px 6px 15px;
+    height: 44px;
+    background: #fff;
+}
+.frame2 .row2 p {
+    font-style: italic;
+}
+.frame2 .row2 span {
+    margin-left: 10px; 
+    color:#256892;
+    font-style: normal;
+}
+.frame3 {
+    border: 1px solid rgba(0, 0, 0, 0);
+    color:#000;
+    position: absolute;
+    top:32.5px;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    z-index: 2;
+    padding: 20px;
+    width: 1000px;
+    display: none;
+}
+.frame3 ul {
+    float:left;
+    padding: 0;
+    padding-right: 5%;
+    margin: 0;
+    display: block;
+    font-weight: normal;
+    color:#636363;
+}
+.frame3 li {
+    margin-right:0 !important;
+    padding: 0;
+    margin-bottom:10px;
+    min-width: 145px;
+    max-width: 145px;
+}
+.frame3 li:first-child {
+    font-size: 15px;
+    font-weight: 600;
+}
+.frame3 .green {
+    display: inline-block;
+    border-bottom: 2px solid #27eca3;
+    min-width: 0;
+    width: auto !important;
+}
+.frame3 .yellow2 {
+    border-bottom: 2px solid #d4c306;
+}
+.frame3 .purple2 {
+    display: inline-block;
+    border-bottom: 2px solid #cd06d4;
+    min-width: 0;
+    width: auto !important;
+}
+.frame3 .red {
+    display: inline-block;
+    border-bottom: 2px solid #d02a1f;
+    min-width: 0;
+    width: auto !important;
+}
+.frame3 .gray {
+    display: inline-block;
+    border-bottom: 2px solid rgba( 5, 5, 5, 0.102 );
+    min-width: 0;
+    width: auto !important;
+}
 /* ******************************************************************** Каталог*/
 
 .wrapper {
