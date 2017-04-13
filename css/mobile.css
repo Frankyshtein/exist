@@ -1,9 +1,16 @@
 @media screen and (max-device-width: 750px) {
+    html {
+        min-width: 100px;
+        width: 100%;
+    }
     header , footer, body {
-        min-width: 0;
+        min-width: 100px;
+        max-width: 100px;
     }
     .signIn , .wrapper  {
-        width: calc(100% - 40px);
+/*        width: calc(100% - 40px);*/
+        width: auto !important;
+        box-sizing: border-box;
     }
     .signIn > span {
         display: none;
@@ -51,5 +58,11 @@
     }
     .wrapper .column2 {
         display: none;
+    }
+    footer , .wrapper , .menu , .search , .signIn {
+        display: none;
+    }
+    div {
+        width:400px !important; 
     }
 }
