@@ -1,12 +1,9 @@
 @media screen and (max-device-width: 750px) {
-    body {
-        font-size:20px;
-    }
     header , footer, body {
         min-width: 0;
     }
-    .signIn {
-        width: cacl(100% - 40px);
+    .signIn , .wrapper  {
+        width: calc(100% - 40px);
     }
     .signIn > span {
         display: none;
@@ -27,5 +24,32 @@
     .signIn .green {
         display: block;
         width: 70px;
+    }
+    .search .large {
+        display: none;
+    }
+    .search .small {
+        display: block;
+        width: 55px;
+        height: 51px;
+    }
+    .search > div {
+        width: calc(100% - 40px);
+    }
+    .search form {
+        width: auto;
+    }
+    .menu > div {
+        width: calc(100% - 40px);
+    }
+    .menu li {
+        display: none;
+    }
+    .menu li:first-child {
+        display: block;
+        color: #256892;
+    }
+    .wrapper .column2 {
+        display: none;
     }
 }

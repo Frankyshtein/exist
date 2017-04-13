@@ -212,6 +212,9 @@ header {
 .search > div > div:hover {
     background: #ffe085;
 }
+.search .small {
+    display: none;
+}
 .basket {
     background: url(../img/icons-new.png) no-repeat;
     width: 45px;
@@ -229,8 +232,7 @@ header {
 .search form {
     margin-left: 2%;
     width:59%;
-    position: relative;
-    
+    position: relative;    
 }
 .searchInput {
     height:45px;
