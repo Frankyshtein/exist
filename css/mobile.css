@@ -1,5 +1,5 @@
 @media screen and (max-device-width: 750px) {
-    .wrapper , footer  {
+    footer  {
         display: none;
     }
     header , footer, body {
@@ -11,7 +11,7 @@
         padding-left: 20px;
     }
     .displayNone {
-        display: none;
+        display: none !important;
     }
     .search .large {
         display: none;
@@ -52,5 +52,49 @@
     }
     .menu .lines {
         bottom:-10px;
+    }
+    .wrapper {
+        width: 100%;
+        padding: 0 10px 0 10px;
+        box-sizing: border-box;
+    }
+    .wrapper .column1 {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .wrapper .block {
+        display: none;
+    }
+    .wrapper .catalog {
+        flex-wrap: wrap;
+        padding: 25px;
+        justify-content: flex-start;
+    }
+    .wrapper ul {
+        width: 45%;
+    }
+    .popular {
+        display: block;
+    }
+    .popular > span {
+        width: 100%;
+        padding-left: 70%;
+        box-sizing: border-box;
+    }
+    .popular > span:first-child{
+        width: 100%;
+        padding-left:0;
+    }
+    .popular > div {
+        margin: 0 auto;
+        border: none;
+        width: auto;
+    }
+    .news ul {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .news li {
+        width:auto;
     }
 }
