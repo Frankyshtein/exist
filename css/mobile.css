@@ -1,7 +1,4 @@
 @media screen and (max-device-width: 750px) {
-    footer  {
-        display: none;
-    }
     header , footer, body {
         min-width: 0;
     }
@@ -96,5 +93,43 @@
     }
     .news li {
         width:auto;
+    }
+    .news > div {
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 20px 0;
+    }
+    .news > div > div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .news > div > div img {
+        height: 100%;
+    }
+    footer > div ul {
+        display: none;
+    }
+    .partner {
+        display: block;
+    }
+    .partner ul {
+        display: block;
+    }
+    footer li:first-child {
+        color:#717584;
+        font-size: normal;
+        font-size:13px;
+    }
+    
+    summary {
+        outline: 0;
+    }
+    details[open] SUMMARY ~ * {
+        animation: sweep .5s ease-in-out;
+    }
+
+    @keyframes sweep {
+        0%    {opacity: 0; margin-left: -10px}
+        100%  {opacity: 1; margin-left: 0px}
     }
 }
