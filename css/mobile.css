@@ -1,36 +1,17 @@
 @media screen and (max-device-width: 750px) {
-    html {
-        min-width: 100px;
-        width: 100%;
-    }
-    header , footer, body {
-        min-width: 100px;
-        max-width: 100px;
-    }
-    .signIn , .wrapper  {
-/*        width: calc(100% - 40px);*/
-        width: auto !important;
-        box-sizing: border-box;
-    }
-    .signIn > span {
+    .wrapper , footer  {
         display: none;
     }
-    .signIn > a {
-        visibility: hidden;
+    header , footer, body {
+        min-width: 0;
     }
-    .signIn .enter {
-        visibility: visible;
+    .signIn {
+        width:100%;
+        margin: 0;
+        padding-left: 20px;
     }
-    .signIn .enter .arrow {
-        margin-left: 0;
-    }
-    .signIn .enter span {
-        display: block;
-        width: 40px;
-    }
-    .signIn .green {
-        display: block;
-        width: 70px;
+    .displayNone {
+        display: none;
     }
     .search .large {
         display: none;
@@ -41,28 +22,35 @@
         height: 51px;
     }
     .search > div {
-        width: calc(100% - 40px);
+        width: 100%;
+        padding: 0 10px 0 10px;
+        margin: 0;
+        box-sizing: border-box;
     }
-    .search form {
-        width: auto;
+    .basket {
+        background-position: 2px -224px;
+    }
+    .search > div  div{
+        width: 45px;
+        margin-left: 0;
+        border-radius: 50%;
+    }
+    .search > div > div {
+        margin-left:10px;
     }
     .menu > div {
-        width: calc(100% - 40px);
+        margin: 0;
+        width: 100%;
+        padding-left:10px;
+        box-sizing: border-box;
     }
-    .menu li {
+    .menu > div > ul li {
         display: none;
     }
-    .menu li:first-child {
+    .menu > div > ul li:first-child {
         display: block;
-        color: #256892;
     }
-    .wrapper .column2 {
-        display: none;
-    }
-    footer , .wrapper , .menu , .search , .signIn {
-        display: none;
-    }
-    div {
-        width:400px !important; 
+    .menu .lines {
+        bottom:-10px;
     }
 }
