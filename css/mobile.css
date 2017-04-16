@@ -106,6 +106,12 @@
     .news > div > div img {
         height: 100%;
     }
+    .news > a {
+        width: 100px;
+    }
+    footer {
+        width: 100%;
+    }
     footer > div ul {
         display: none;
     }
@@ -114,15 +120,47 @@
     }
     .partner ul {
         display: block;
+        width: 100%;
+        padding-left:20px;
     }
     footer li:first-child {
         color:#717584;
         font-weight: normal;
         font-size:13px;
     }
+    footer .row2 {
+        flex-direction:column;
+        justify-content: center;
+        align-content: center;
+    }
+    footer .row2 span {
+        width: 80%;
+    }
+    footer .row3 {
+        flex-direction:column;
+    }
+    footer .row3 div {
+        display: block;
+    }
+    footer .row3 > div span {
+        display: block;
+    }
     
+    
+    
+    
+    
+    
+    
+    
+    details {
+        border-bottom: 1px solid #c5d1d7;
+        padding: 5px 0;
+    }
     summary {
         outline: 0;
+        color:#717584;
+        font-weight: bold;
     }
     details[open] SUMMARY ~ * {
         animation: sweep .5s ease-in-out;
@@ -131,5 +169,24 @@
     @keyframes sweep {
         0%    {opacity: 0; margin-left: -10px}
         100%  {opacity: 1; margin-left: 0px}
+    }
+    summary::-webkit-details-marker {
+        display: none
+    }
+    summary:after {
+        background: url(../img/icons-new2.png) -20px -867px no-repeat;
+        content: "+";
+        width: 13px;
+        height: 16px;
+        float: left;
+        color: rgba(0,0,0,0);
+    }
+    details[open] summary:after {
+        color: rgba(0,0,0,0);
+        content: "-";
+        transform: rotate(90deg);
+        height: 16px;
+        background: url(../img/icons-new2.png) -15px -867px no-repeat;
+        transition: transform ease-in 0.5s, background ease-in 0.5s;
     }
 }
