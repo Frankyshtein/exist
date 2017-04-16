@@ -130,24 +130,52 @@
     }
     footer .row2 {
         flex-direction:column;
-        justify-content: center;
         align-content: center;
+        text-align: center;
+        border: none;
+        padding-bottom: 0;
+    }
+    footer .row2 p {
+        width: 100%;
+        margin-bottom: 20px;
     }
     footer .row2 span {
-        width: 80%;
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 10px;
     }
     footer .row3 {
+        padding-top: 0;
         flex-direction:column;
     }
     footer .row3 div {
         display: block;
+        text-align: center;
     }
     footer .row3 > div span {
         display: block;
+        margin-bottom: 10px;
+        color: gray;
     }
-    
-    
-    
+    .frame2 {
+        width: 300px;
+    }
+    .frame3 {
+        width:auto;
+    }
+    .frame3 .partner li {
+        display: block;
+        border-bottom: 1px solid #e4e4e2;
+    }
+    .frame3 .partner li:last-child {
+        border-bottom: none;
+    }
+    .frame3 li:first-child {
+        font-size: inherit;
+        font-weight: normal;
+    }
     
     
     
