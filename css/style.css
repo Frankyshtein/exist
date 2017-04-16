@@ -701,5 +701,5 @@ footer .row3 div:last-child {
     justify-content: flex-end;
 }
 .partner {
-    display: none;
+    display: none !important;
 }
